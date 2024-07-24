@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Talita ASR v.202407-1</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/modules/fontawesome/css/all.min.css">
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="assets/modules/dropzonejs/dropzone.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.2/dist/sweetalert2.min.css">
+    
+    
+  <!-- <link rel="stylesheet" href="assets/modules/fontawesome/css/fontawesome.min.css"> -->
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+<!-- Start GA -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.2/dist/sweetalert2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.0/socket.io.min.js"></script> -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-94034622-3');
+  </script>
+<!-- /END GA --></head>
+
+<body>
+  <div class="overlay" id="loadingOverlay">
+    <div class="spinner"></div>
+  </div>
+
+
+  <div id="app">
+    <div class="main-wrapper main-wrapper-1">
+      
+     
+      <div class="main-sidebar sidebar-style-2">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <img class="rounded-circle" width="150" src="assets/img/talita/talita-photo-kotak.png" alt="product">
+          </div>
+          <div class="sidebar-brand sidebar-brand-sm">
+            <a href="index.html">St</a>
+          </div>
+          <ul class="sidebar-menu">
+            <li class="menu-header">History</li>
+            <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Models</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="index-0.html">General Dashboard</a></li>
+                <li><a class="nav-link" href="index.html">Ecommerce Dashboard</a></li>
+              </ul>
+            </li>
+            
+          </ul>
+
+                  
+        </aside>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <h1>Talita ASR v.202407-1</h1>
+            <div class="section-header-breadcrumb">
+              <a href="#" class="btn btn-icon icon-left btn-primary" id="startCall" style="display: none"><i class="fa-solid fa-phone"></i>     Start Call</a>
+              <a href="#" class="btn btn-icon icon-left btn-danger" id="endCall" style="display: none"><i class="fa-solid fa-phone-slash"></i>     End Call</a>
+            </div>
+          </div>
+
+          <div class="section-body">
+            <!-- <h2 class="section-title">Judul</h2>
+            <p class="section-lead">Deskripsi Dari judul tersebut</p> -->
+
+            <div class="row">
+              <div class="col-12 col-sm-12 col-lg-12">
+                <div class="card">
+        
+                  <div class="card-body">
+                    <div class="nav-container">
+                      <ul class="nav nav-tabs" id="myTab" role="tablist">
+                          <!-- <li class="nav-item">
+                              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                          </li> -->
+                          <li class="nav-item">
+                              <a class="nav-link active" id="config-tab" data-toggle="tab" href="#config" role="tab" aria-controls="config" aria-selected="true">Configuration</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" id="transcript-tab" data-toggle="tab" href="#transcript" role="tab" aria-controls="transcript" aria-selected="false">Transcript</a>
+                          </li>
+                          <!-- <li class="nav-item">
+                              <a class="nav-link" id="ex-tab" data-toggle="tab" href="#ex" role="tab" aria-controls="ex" aria-selected="false">ex</a>
+                          </li> -->
+                      </ul>
+                      <!-- <a href="#" class="btn btn-icon icon-left btn-danger"><i class="fa-solid fa-angles-up"></i>     Update</a> -->
+                  
+                    </div>  
+                    <div class="tab-content" id="myTabContent">
+                      <!-- <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="col-12 col-sm-6 col-lg-12">
+                          <div class="card">
+                            <div class="title-head">
+                              <h1>Chat Transcript</h1>
+                              <div class="card-button">
+                                <a href="#" class="btn btn-icon icon-left btn-primary"><i class="fa-solid fa-file-export"></i>     Export</a>
+                              </div>
+                            </div>
+
+                            
+                            <div class="row">
+                              <div class="col-8">
+                                <div class="form-group">
+                                  <label>First Message</label>
+                                  <input type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                  <label>System Prompt</label>
+                                  <textarea class="form-control text-area" required=""></textarea>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div> -->
+                      <div class="tab-pane fade show active" id="config" role="tabpanel" aria-labelledby="config-tab">
+                        <div class="col-12 col-sm-6 col-lg-12">
+                          <div class="card">
+                            <div class="title-head">
+                              <h1>Model Settings</h1>
+                              <div class="card-button">
+                                <a href="#" class="btn btn-icon icon-left btn-primary" id="saveConfig"><i class="fa-solid fa-floppy-disk"></i>     Save</a>
+                              </div>
+                            </div>
+                            
+                            
+                            <div class="row">
+                              <div class="col-8">
+                                <div class="form-group">
+                                  <label>First Message</label>
+                                  <input type="text" class="form-control" id="firstMessage">
+                                </div>
+                                <div class="form-group">
+                                  <label>System Prompt</label>
+                                  <textarea class="form-control text-area" required="" id="systemPrompt"></textarea>
+                                </div>
+                              </div>
+                              <div class="col-4">
+                                <div class="form-group">
+                                  <label>Model Name</label>
+                                  <input type="text" class="form-control" id="modelName">
+                                </div>
+                                <div class="form-group">
+                                  <label>Knowledge File</label>
+                                  <input type="file" class="form-control" id="knowledgeFile" accept="application/pdf">
+                                </div>
+                                <!-- <div class="form-group">
+                                  <form action="#" class="dropzone" id="mydropzone">
+                                    <div class="fallback">
+                                      <input name="file" type="file" id="knowledgeFile" accept="application/pdf">
+                                    </div>
+                                  </form>
+                                </div> -->
+                                <div class="form-group">
+                                  <label>Temperature</label>
+                                  <label id="sliderValue" for="sliderValue">0</label>
+                                  <input type="range" class = "form-control" id="temperatureSlider" min="0" max="1" step="0.1" value="0">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                      <div class="tab-pane fade" id="transcript" role="tabpanel" aria-labelledby="transcript-tab">
+                        <div class="col-12 col-sm-6 col-lg-12">
+                          <div class="card">
+                            <div class="title-head">
+                              <h1>Chat Transcript</h1>
+                              <div class="card-button">
+                                <a href="#" class="btn btn-icon icon-left btn-primary" id="exportButton"><i class="fa-solid fa-file-export"></i>     Export</a>
+                              </div>
+                            </div>
+                           
+                            
+                            <div class="card-body chat-box" id="status"> 
+                              <!-- <p id="status">
+                                
+                             </p> -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <div class="tab-pane fade" id="ex" role="tabpanel" aria-labelledby="ex-tab">
+                        Vestibulum imperdiet odio sed neque ultricies, ut dapibus mi maximus. Proin ligula massa, gravida in lacinia efficitur, hendrerit eget mauris. Pellentesque fermentum, sem interdum molestie finibus, nulla diam varius leo, nec varius lectus elit id dolor. Nam malesuada orci non ornare vulputate. Ut ut sollicitudin magna. Vestibulum eget ligula ut ipsum venenatis ultrices. Proin bibendum bibendum augue ut luctus.
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="main-footer">
+        <div class="footer-left">
+          Copyright &copy; 2024 <div class="bullet"></div> Design By <a href="#">Corporate IT</a>
+        </div>
+        <div class="footer-right">
+          
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- General JS Scripts -->
+  <script src="assets/modules/jquery.min.js"></script>
+  <script src="assets/modules/popper.js"></script>
+  <script src="assets/modules/tooltip.js"></script>
+  <script src="assets/modules/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+  <script src="assets/modules/moment.min.js"></script>
+  <script src="assets/js/stisla.js"></script>
+  
+  <!-- JS Libraies -->
+  <!-- <script src="assets/modules/dropzonejs/min/dropzone.min.js"></script> -->
+  <script src="assets/modules/sweetalert/sweetalert.min.js"></script>
+
+  <!-- Page Specific JS File -->
+  <!-- <script src="assets/js/page/components-multiple-upload.js"></script> -->
+  <script src="assets/js/page/modules-sweetalert.js"></script>
+  
+  <!-- Template JS File -->
+  <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <!-- <script src="assets/js/streamTTSInterupt.js"></script> -->
+  <script>
+</script>
+</body>
+</html>

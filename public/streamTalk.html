@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real-Time TTS</title>
+</head>
+<body>
+    <h1>Real-Time TTS</h1>
+    <input type="text" id="text" placeholder="Enter text to speak">
+    <button id="speak">Speak</button>
+    <audio id="audio" controls></audio>
+    <input id="output">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.0/socket.io.min.js"></script>
+    <script>
+        const socket = io.connect('http://localhost:5544');
+
+        document.getElementById('text').addEventListener('input', () => {
+            // setTimeout(() =>{
+                const text = document.getElementById('text').value;
+                socket.emit('tts_request', { text: text });
+            // }, 1);
+            
+        });
+
+        socket.on('tts_response', data => {
+            const output = document.getElementById('output');
+            console.log(data);
+            output.value = data.audio;
+            // audio.src = 'data:audio/wav;base64,' + data.audio;
+            // audio.play();
+        });
+    </script>
+</body>
+</html>

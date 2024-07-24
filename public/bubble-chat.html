@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Bubble</title>
+    <!-- General CSS Files -->
+    <link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/modules/fontawesome/css/all.min.css">
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="assets/modules/dropzonejs/dropzone.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.2/dist/sweetalert2.min.css">
+
+
+    <!-- <link rel="stylesheet" href="assets/modules/fontawesome/css/fontawesome.min.css"> -->
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+</head>
+
+<body>
+    <div class="chat-bubble" id="chatBubble">
+        <div class="chat-header">
+            Chat
+            <span class="close-btn" id="closeBtn">&times;</span>
+        </div>
+        <div class="chat-body">
+            <a href="#" class="btn btn-icon icon-left btn-primary" id="startCall"><i class="fa-solid fa-phone"></i>
+                Start Call</a>
+            <a href="#" class="btn btn-icon icon-left btn-danger" id="endCall" style="display: none"><i
+                    class="fa-solid fa-phone-slash"></i> End Call</a>
+        </div>
+        <div class="chat-footer">
+            <div class="chat-transcript" id="status">
+                
+            </div>
+        </div>
+    </div>
+    <button id="chatBtn">Chat</button>
+    <!-- <script src="assets/js/scripts.js"></script> -->
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/bubble_chat.js"></script>
+</body>
+
+</html>
